@@ -185,18 +185,6 @@ span:nth-of-type(12) {
     top: 5%;
 }
 
-@media (max-width: 1180px) {
-    .presentation-text {
-        writing-mode: horizontal-tb;
-        position: static;
-    }
-
-    .presentation-ellipse {
-        display: none;
-    }
-
-
-}
 
 .presentation-vid {
     display: block;
@@ -214,5 +202,75 @@ span:nth-of-type(12) {
 .invitation {
     height: 100vh;
     color: #3c485e;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.invitation p {
+    display: block;
+}
+
+.invitation-text {
+    flex-basis: 50%;
+}
+
+.invitation-text b {
+    color: rgba(141, 34, 34, 0.37);
+}
+
+.contacts {
+    background-image: url("images/ezgif.com-gif-maker (4).gif");
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: 50% 50%;
+    color: white;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
     text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacts a {
+    color: white;
+}
+
+.contacts a:hover {
+    color: #3c485e;
+}
+
+
+@media (max-width: 1180px) {
+    .main {
+        background-image: url("images/ezgif.com-gif-maker (2) (1).gif");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .presentation-text {
+        writing-mode: horizontal-tb;
+        position: static;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .presentation-ellipse {
+        display: none;
+    }
+
+    .invitation {
+        align-content: center;
+        flex-direction: column;
+    }
+
+    .invitation p {
+        text-align: center;
+    }
+
 }

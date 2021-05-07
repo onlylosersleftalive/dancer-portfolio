@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,800;0,900;1,400&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53d6398bbd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
 
@@ -18,8 +19,8 @@
         <div class="main">
             <nav>
                 <p class="nav-item logo">vikavann</p>
-                <div class="nav-item"><a href="#">Обо мне</a></div>
-                <div class="nav-item"><a href="#">Контакты</a></div>
+                <div class="nav-item"><a href="#aboutme">Обо мне</a></div>
+                <div class="nav-item"><a href="#contact-me">Контакты</a></div>
             </nav>
             <div class="main-text-container">
                 <h1>
@@ -38,7 +39,7 @@
                 </h1>
             </div>
         </div>
-        <div class="introduction">
+        <div class="introduction" id="aboutme">
             <p class="introduction-text">Привет, <br> меня зовут <b>Вика Ванюшина</b>, <br> и я контемпорари танцор и
                 хореограф
             </p>
@@ -52,20 +53,26 @@
             <img class="presentation-ellipse" src="images\Ellipse 1.png" alt="">
         </div>
         <div class="invitation">
-            <p>Я набираю группу начинающих по контемпорари. <br><br>
+            <p class="invitation-text">Я набираю группу начинающих по контемпорари. <br><br>
 
                 Эта группа подойдёт для тех, кто: <br><br>
 
-                - хочет научиться танцевать с нуля <br>
-                - освоить новый стиль <br><br>
+                <b>- хочет научиться танцевать с нуля </b> <br>
+                <b>- освоить новый стиль </b> <br><br>
 
                 Занятия рассчитаны на продолжительное время. <br><br>
 
-                Мы начнём с базы и физической подготовки, затем будем плавно переходить к изучению хореографии и
-                импровизации.</p>
+                Мы начнём с базы и физической подготовки, <br> затем будем плавно переходить к изучению хореографии и
+                импровизации.
+            </p>
 
-            <p>Где: м. Бауманская</p>
-            <p>Стоимость: 5500 рублей в месяц</p>
+            <p class="invitation-place">Где: <br> м. Бауманская </p>
+            <p class="invitation-price">Стоимость: <br> 5500 рублей в месяц </p>
+        </div>
+        <div class="contacts" id="contact-me">
+            <h1>По всем вопросам писать в Instagram:</h1>
+            <a target="_blank" href="https://www.instagram.com/vikavann/?hl=ru"><i
+                    class="fab fa-instagram fa-2x"></i></a>
         </div>
     </main>
     <script src="./app.js"></script>
