@@ -147,7 +147,11 @@ span:nth-of-type(12) {
     z-index: 1;
 }
 
-.introduction-img {
+.introduction-text b {
+    color: rgba(141, 34, 34, 0.37);
+}
+
+.introduction-ellipse {
     position: absolute;
     top: 30%;
     left: 50%;
@@ -155,8 +159,60 @@ span:nth-of-type(12) {
     height: 50rem;
 }
 
-.presentation {
-    color: #3c485e;
-    height: 100vh;
+.introduction-img {
+    width: 80rem;
+    height: auto;
+    margin-bottom: 10%;
+}
 
+.presentation {
+    background-color: #3c485e;
+    color: white;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.presentation-text {
+    font-size: 10rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: 80%;
+    top: 5%;
+}
+
+@media (max-width: 1180px) {
+    .presentation-text {
+        writing-mode: horizontal-tb;
+        position: static;
+    }
+
+    .presentation-ellipse {
+        display: none;
+    }
+
+
+}
+
+.presentation-vid {
+    display: block;
+    width: 90rem;
+    height: auto;
+    z-index: 1;
+}
+
+.presentation-ellipse {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.invitation {
+    height: 100vh;
+    color: #3c485e;
+    text-align: center;
 }
