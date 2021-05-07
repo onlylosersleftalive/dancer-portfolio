@@ -15,7 +15,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 3.6rem;
     color: white;
-    background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+    background-color: white;
 }
 
 nav {
@@ -126,4 +126,37 @@ span:nth-of-type(12) {
         transform: scaleX(1);
         opacity: 1;
     }
+}
+
+.introduction {
+    min-height: 100vh;
+    font-size: 8rem;
+    color: #3c485e;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.introduction-text {
+    margin-left: 10rem;
+    line-height: 15rem;
+    z-index: 1;
+}
+
+.introduction-img {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 50rem;
+    height: 50rem;
+}
+
+.presentation {
+    color: #3c485e;
+    height: 100vh;
+
 }
