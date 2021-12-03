@@ -1,8 +1,8 @@
 # Landing page
 
-Web page of the dancer's portfolio.
+This is the second version of the website for a dancer. The design was made by me in Figma. I created animation for the text from the first section of the web-page. I also used flexbox and grid layouts. The website is responsive. 
 
-![layout]()
+![layout](https://github.com/onlylosersleftalive/dancer-portfolio/blob/master/images/gif-for-readme.gif)
 
 ## Demo
 
@@ -11,4 +11,4 @@ Online demo is available [here](https://onlylosersleftalive.github.io/dancer-por
 ## Technologies
 
 - HTML
-- CSS
+- CSS (Flexbox, Grid, Animation)
