@@ -1,22 +1,44 @@
+/*GENERAL*/
+
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 10px;
 }
 
-*,
-*::after,
-*::before {
-    box-sizing: inherit;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-    padding: 0;
-    margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 3.6rem;
+    font-size: 3rem;
     color: white;
-    background-color: white;
+    background-color: #989397;
 }
+
+main {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #3c485e;
+}
+
+/*NAVBAR*/
 
 nav {
     display: flex;
@@ -29,23 +51,15 @@ nav {
     margin-right: 5rem;
 }
 
-.nav-item a {
-    text-decoration: none;
-    color: white;
-}
-
-.nav-item a:hover {
-    color: #3c485e;
-}
-
 .logo {
     margin-right: auto;
     margin-left: 5rem;
 }
 
+/*FIRST SECTION*/
+
 .main {
-    min-height: 100vh;
-    background-image: url("images/ezgif.com-gif-maker (2).gif");
+    background-image: url("images/gif-1.gif");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -67,6 +81,8 @@ nav {
     animation: stretch 5s cubic-bezier(0.4, 1.4, 0.75, 0.9) infinite;
     transform-origin: center;
 }
+
+/*FIRST SECTION TEXT ANIMATION*/
 
 span:nth-of-type(1) {
     animation-delay: 3s;
@@ -128,149 +144,128 @@ span:nth-of-type(12) {
     }
 }
 
+/*SECOND SECTION*/
+
 .introduction {
-    min-height: 100vh;
-    font-size: 8rem;
-    color: #3c485e;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
+    height: 50vh;
     position: relative;
-    overflow: hidden;
 }
 
 .introduction-text {
-    margin-left: 10rem;
-    line-height: 15rem;
-    z-index: 1;
-}
-
-.introduction-text b {
-    color: rgba(141, 34, 34, 0.37);
-}
-
-.introduction-ellipse {
+    width: 50%;
+    height: 50%;
     position: absolute;
-    top: 30%;
-    left: 50%;
-    width: 50rem;
-    height: 50rem;
+    right: 3%;
+    bottom: 0%;
 }
 
-.introduction-img {
-    width: 80rem;
-    height: auto;
-    margin-bottom: 10%;
-}
+/*THIRD SECTION*/
 
 .presentation {
-    background-color: #3c485e;
-    color: white;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 150vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-items: center;
     align-items: center;
+}
+
+.video-container {
+    width: 500px;
+    height: 500px;
     overflow: hidden;
 }
 
-.presentation-text {
-    font-size: 10rem;
-    writing-mode: vertical-rl;
-    position: absolute;
-    left: 80%;
-    top: 5%;
+.video-container:hover {
+    border: 30px solid #3c485e;
 }
 
-
-.presentation-vid {
-    display: block;
-    width: 90rem;
-    height: auto;
-    z-index: 1;
-}
-
-.presentation-ellipse {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-}
-
-.invitation {
-    height: 100vh;
-    color: #3c485e;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.invitation p {
-    display: block;
-}
-
-.invitation-text {
-    flex-basis: 50%;
-}
-
-.invitation-text b {
-    color: rgba(141, 34, 34, 0.37);
-}
+/*FOURTH SECTION*/
 
 .contacts {
-    background-image: url("images/ezgif.com-gif-maker (4).gif");
-    background-repeat: repeat-x;
-    background-size: cover;
-    background-position: 50% 50%;
-    color: white;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    height: 20vh;
+}
+
+.contacts p {
+    margin-left: 3%;
 }
 
 .contacts a {
-    color: white;
+    text-decoration: underline;
 }
 
-.contacts a:hover {
-    color: #3c485e;
+.author {
+    font-size: 2rem;
+    margin-top: 3%;
 }
 
+/*MEDIA QUERIES*/
 
-@media (max-width: 1180px) {
+@media (max-width: 1000px) {
+    body {
+        font-size: 2.5rem;
+    }
+
     .main {
-        background-image: url("images/ezgif.com-gif-maker (2) (1).gif");
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-image: url("images/gif-2.gif");
     }
 
-    .presentation-text {
-        writing-mode: horizontal-tb;
-        position: static;
-        width: 90vw;
-        text-align: center;
+    .main-text-container h1 {
+        font-size: 4rem;
     }
 
-    .presentation-ellipse {
+    .introduction {
+        height: 40vh;
+    }
+
+    .presentation {
+        height: 90vh;
+        scroll-snap-type: x;
+        scroll-padding: 50%;
+        overflow-x: scroll;
+        display: flex;
+        gap: 20px;
+    }
+
+    .presentation::-webkit-scrollbar {
         display: none;
     }
 
-    .invitation {
-        align-content: center;
-        flex-direction: column;
+    .video-container {
+        scroll-snap-align: center;
+        display: flex;
+        flex: 1 0 500px;
+        justify-content: center;
     }
 
-    .invitation p {
-        text-align: center;
+    .video-container:hover {
+        border: none;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 2rem;
     }
 
+    nav div {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 1rem;
+    }
+
+    .main-text-container h1 {
+        font-size: 2.8rem;
+    }
+
+    .introduction-text {
+        width: 70%;
+    }
+
+    .video-container {
+        flex: 1 0 450px;
+        width: 350px;
+        height: 350px;
+    }
 }
